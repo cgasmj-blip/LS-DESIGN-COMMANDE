@@ -3,7 +3,8 @@ import type { Session } from "@supabase/supabase-js";
 import { lsDesign, supabase } from "./lib/supabase";
 
 type CatalogItem={id:string;name:string;description:string|null;price_label:string|null;available:boolean;visible:boolean;position:number};
-type Order={id:string;order_number:string;catalog_item_id:string|null;catalog_item_name:string;description:string;status:string;company_name:string|null;phone:string|null;created_at:string;assigned_staff_id?:string|null};\ntype StaffInfo={authorized:boolean;grade?:string;display_name?:string;reason?:string};
+type Order={id:string;order_number:string;catalog_item_id:string|null;catalog_item_name:string;description:string;status:string;company_name:string|null;phone:string|null;created_at:string;assigned_staff_id?:string|null};
+type StaffInfo={authorized:boolean;grade?:string;display_name?:string;reason?:string};
 type Message={id:number;order_id:string;author_type:string;author_name:string;body:string;created_at:string};
 const fallback:CatalogItem[]=[
 {id:"sac",name:"Sac",description:"Création graphique personnalisée pour un sac.",price_label:"Sur devis",available:true,visible:true,position:1},
